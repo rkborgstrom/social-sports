@@ -7,12 +7,11 @@ const app = express();
 const port = process.env.PORT || 8000;
 const knex = require('knex')(config);
 const morgan = require('morgan');
+const index = require('./routes/index');
+const post = require('./routes/post');
 
-
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(express.static(path.join(__dirname, 'public')));
 app.disable('x-powered-by');
 app.use(morgan('short'));
 
@@ -23,8 +22,11 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get('/', (req, res, next) => {
-    res.render('index', {user_report: []});
+    res.render('index', {bettors: []});
 })
+
+app.use('/index', index);
+app.use(post);
 
 app.use((_req, res) => {
     res.sendStatus(404);

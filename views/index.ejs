@@ -1,0 +1,79 @@
+<% include partials/header %>
+
+<section class="title pl-2">
+  <h2>Connecting bettors from around the world.</h2>
+
+</section>
+
+<section class="center">
+  <h2 class="what">I want to: </h2>
+  <section class="buttons">
+    <a href="/index" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Show me Bets</a>
+    <a href="/post" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Post a Bet</a>
+  </section>
+</section>
+
+<br>
+
+
+<main class="container">
+
+  <section class="row">
+    <% for(data of bettors.reverse()) { %>
+    <section class="col-container">
+      <section class="col">
+        <section class="card">
+          <section class="card-body">
+            <h4 class="card-title">
+
+              <strong>
+                <h1 class="d-flex justify-content-center" style="color: #318ac4;">
+                  <%= data.username %>
+                </h1>
+                <hr>
+
+                <h4>
+                  <strong class="line">Line: &nbsp
+                    <i>
+                      <%= data.line %>
+                    </i>
+                </h4>
+              </strong>
+
+              <section class="row">
+                <section class="col">
+                  <h5>
+                    <hr>
+                    <strong>Wager Amount:</strong>
+                    <%= data.wagerAmount %>
+                    <hr>
+                  </h5>
+                </section>
+
+              <section class="row">
+                <section class="col">
+                  <h5>
+                    <strong>Date of Game:</strong>
+                    <%= data.date.toDateString() %>
+                  </h5>
+                </section>
+                <section class="col">
+                  <h5>
+                    <strong>Time of Game (MST):</strong>
+                    <%= data.time %>
+                  </h5>
+                </section>
+              </section>
+            </section>
+          </section>
+      </section>
+      <br>
+    </section>
+    <%}%>
+  </section>
+  </section>
+</main>
+</section>
+
+
+<% include partials/footer %>
