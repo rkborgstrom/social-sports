@@ -1,14 +1,11 @@
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
 const bodyParser = require('body-parser');
 const config = require('./knexfile.js')['development'];
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 8000;
 const knex = require('knex')(config);
-// const bcryptjs = require('bcryptjs');
 const morgan = require('morgan');
 
 
