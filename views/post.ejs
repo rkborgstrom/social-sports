@@ -2,20 +2,31 @@
 
   <section class="form-bg d-flex justify-content-center">
     <form class="needs-validation" novalidate action="/post" method="POST">
+      <section class="buttons">
+        <a href="/index" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Show me Bets</a>
+        <a href="/post" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Post a Bet</a>
+      </section>
 
       <div class="form-row">
-
         <div class="col-md-6 mb-3">
           <label for="username">Username</label>
           <input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
         </div>
       </div>
       </div>
+
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="line">Line </label>
           <input type="text" class="form-control" id="line" name="line" placeholder="e.g. Kansas -4.5" required>
         </div>
+
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="wagerAmount">Wager Amount(USD): </label>
+            <input type="text" class="form-control" id="wagerAmount" name="wagerAmount" placeholder="45.00" required>
+          </div>
+
         <div class="col-md-3 mb-3">
           <label for="date">Date</label>
           <input type="date" class="form-control" id="date" name="date" placeholder="Date" required>
@@ -23,6 +34,7 @@
             Please provide a valid date.
           </div>
         </div>
+
         <div class="col-md-3 mb-3">
           <label for="time">Time</label>
           <input type="time" class="form-control" id="time" name="time" required>

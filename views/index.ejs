@@ -1,79 +1,67 @@
 <% include partials/header %>
 
 <section class="title pl-2">
-  <h2>Connecting bettors from around the world.</h2>
+  <h2 style="color: white">Connecting bettors from around the world.</h2>
 
 </section>
 
 <section class="center">
-  <h2 class="what">I want to: </h2>
+  <h2 class="what" style="color: white">I want to: </h2>
   <section class="buttons">
     <a href="/index" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Show me Bets</a>
     <a href="/post" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Post a Bet</a>
   </section>
 </section>
-
 <br>
 
 
-<main class="container">
 
-  <section class="row">
-    <% for(data of bettors.reverse()) { %>
-    <section class="col-container">
-      <section class="col">
-        <section class="card">
-          <section class="card-body">
-            <h4 class="card-title">
 
-              <strong>
-                <h1 class="d-flex justify-content-center" style="color: #318ac4;">
-                  <%= data.username %>
-                </h1>
-                <hr>
+<div id="scroll-animate">
+  <div id="scroll-animate-main">
+    <div class="wrapper-parallax">
+      <header>
+        <h1>Header</h1>
+      </header>
 
-                <h4>
-                  <strong class="line">Line: &nbsp
-                    <i>
-                      <%= data.line %>
-                    </i>
-                </h4>
-              </strong>
+      <section class="content">
+        <main class="container">
 
-              <section class="row">
-                <section class="col">
-                  <h5>
-                    <hr>
-                    <strong>Wager Amount:</strong>
-                    <%= data.wagerAmount %>
-                    <hr>
-                  </h5>
-                </section>
-
-              <section class="row">
-                <section class="col">
-                  <h5>
-                    <strong>Date of Game:</strong>
-                    <%= data.date.toDateString() %>
-                  </h5>
-                </section>
-                <section class="col">
-                  <h5>
-                    <strong>Time of Game (MST):</strong>
-                    <%= data.time %>
-                  </h5>
-                </section>
-              </section>
-            </section>
-          </section>
+          <% for(data of bettors.reverse()) { %>
+          <div class="card text-center">
+            <div class="card-header">
+              <h2><%= data.username %></h2>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"> Line: <%= data.line %></h5>
+              <p class="card-text">Wager Amount (USD): $<%= data.wagerAmount %></p>
+              <a href="#" class="btn btn-primary">Take Bet</a>
+            </div>
+            <div class="card-footer text-muted">
+              Date of Game: <%= data.date.toDateString() %>
+            </div>
+            <div class="card-footer text-muted">
+              Time of Game (EST): <%= data.time %>
+            </div>
+          </div>
+          <br>
+          <%}%>
+          </main>
       </section>
-      <br>
-    </section>
-    <%}%>
-  </section>
-  </section>
-</main>
-</section>
+
+      <footer>
+        <h1>Footer</h1>
+      </footer>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
 
 
 <% include partials/footer %>

@@ -1,5 +1,6 @@
 'use strict';
 
+const path = require('path');
 const bodyParser = require('body-parser');
 const config = require('./knexfile.js')['development'];
 const express = require('express');
@@ -12,6 +13,7 @@ const post = require('./routes/post');
 
 app.set('view engine', 'ejs');
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.disable('x-powered-by');
 app.use(morgan('short'));
 
