@@ -2,7 +2,7 @@
     font-family: helvetica;
 }
 
-body { 
+body {
     height: 100%;
     min-height: 100vh;
     background: url('../images/Field.jpg') repeat center center fixed;
@@ -16,17 +16,26 @@ body {
     justify-content: center;
 }
 
-.btn {
+a:hover {
     background-color: white !important;
     color: black !important;
 }
 
-a:hover {
-    background-color: #568a02 !important;
-    color: white !important;
-}
-
 .container {
     opacity: 0.9;
+    padding-top: 15px;
     background-color: black;
+}
+
+.formContainer {
+    background: url('../images/green.jpg') repeat center center fixed;
+    padding: 30px 30px 30px 30px;
+    margin: 15px 15px 15px 15px;
+    color: white;
+    opacity: 0.9;
+}
+
+.btl {
+    background-color: black;
+    padding: 30px 30px 30px 30px;
 }

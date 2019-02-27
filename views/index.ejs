@@ -1,67 +1,51 @@
 <% include partials/header %>
-
-<section class="title pl-2">
-  <h2 style="color: white">Connecting bettors from around the world.</h2>
-
-</section>
-
-<section class="center">
-  <h2 class="what" style="color: white">I want to: </h2>
-  <section class="buttons">
-    <a href="/index" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Show me Bets</a>
-    <a href="/post" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Post a Bet</a>
+<section class="btl">
+  <section class="center">
+    <section class="buttons">
+      <a href="/index" class="btn btn-outline-secondary btn-lg" style="color: white;" role="button" aria-pressed="true">Show
+        Bets</a>
+      <a href="/post" class="btn btn-outline-secondary btn-lg" style="color: white;" role="button" aria-pressed="true">Post
+        a Bet</a>
+    </section>
   </section>
 </section>
 <br>
 
+<main class="container">
 
+  <% for(data of bettors.reverse()) { %>
+  <div class="card text-center">
 
-
-<div id="scroll-animate">
-  <div id="scroll-animate-main">
-    <div class="wrapper-parallax">
-      <header>
-        <h1>Header</h1>
-      </header>
-
-      <section class="content">
-        <main class="container">
-
-          <% for(data of bettors.reverse()) { %>
-          <div class="card text-center">
-            <div class="card-header">
-              <h2><%= data.username %></h2>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title"> Line: <%= data.line %></h5>
-              <p class="card-text">Wager Amount (USD): $<%= data.wagerAmount %></p>
-              <a href="#" class="btn btn-primary">Take Bet</a>
-            </div>
-            <div class="card-footer text-muted">
-              Date of Game: <%= data.date.toDateString() %>
-            </div>
-            <div class="card-footer text-muted">
-              Time of Game (EST): <%= data.time %>
-            </div>
-          </div>
-          <br>
-          <%}%>
-          </main>
-      </section>
-
-      <footer>
-        <h1>Footer</h1>
-      </footer>
+    <div class="card-header" style="background: url('../images/cf.jpg'); color: white;">
+      <h2>
+        <%= data.username %>
+      </h2>
     </div>
+
+    <div class="card-body">
+      <h5 class="card-title"> Line:
+        <%= data.line %>
+      </h5>
+      <p class="card-text">Wager Amount (USD): $
+        <%= data.wagerAmount %>
+      </p>
+      <a href="#" class="btn btn-outline-primary">Take Bet</a>
+    </div>
+
+    <div class="card-footer text" style="background-color: #8fcb38; color: white;">
+      Date of Game:
+      <%= data.date.toDateString() %>
+    </div>
+
+    <div class="card-footer text" style="background: url('../images/cf.jpg'); color: white;">
+      Time of Game (EST):
+      <%= data.time %>
+    </div>
+    
   </div>
-</div>
+  <br>
+  <%}%>
 
-
-
-
-
-
-
-
+</main>
 
 <% include partials/footer %>
