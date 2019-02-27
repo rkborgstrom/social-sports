@@ -29,7 +29,9 @@
       <p class="card-text">Wager Amount (USD): $
         <%= data.wagerAmount %>
       </p>
-      <a href="#" class="btn btn-outline-primary">Take Bet</a>
+      <form action="/pay" method="POST">
+        <input type="submit" value="Take Bet">
+      </form>
     </div>
 
     <div class="card-footer text" style="background-color: #8fcb38; color: white;">
@@ -41,11 +43,16 @@
       Time of Game (EST):
       <%= data.time %>
     </div>
-    
+
   </div>
   <br>
   <%}%>
 
 </main>
+
+
+
+
+
 
 <% include partials/footer %>
