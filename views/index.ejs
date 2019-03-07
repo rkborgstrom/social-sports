@@ -38,10 +38,17 @@
 
     <form action="/post" method="post">
       <div>
-        <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1em;">(Comments under construction)
+        <textarea name="comment" id="comment" style="font-family:sans-serif;font-size:0.7em;">(under construction)
       </textarea>
+        <br>
+        <input type="submit" value="Add Comment">
+        <br>
+        <div class="cs">
+          Ryan Borgstrom:
+          <%= data.comment %>
+        </div>
+
       </div>
-      <input type="submit" value="Add Comment">
     </form>
 
     <div class="card-footer text" style="background-color: #8fcb38; color: white;">

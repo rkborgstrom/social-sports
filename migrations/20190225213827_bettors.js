@@ -3,9 +3,11 @@ exports.up = function(knex, Promise) {
         table.increments('id').primary();
         table.string('username');
         table.string('line');
+        table.string('comment');
         table.integer('wagerAmount');
         table.date('date');
         table.time('time');
+        table.string('payment');
     });
   };
   

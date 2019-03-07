@@ -53,9 +53,24 @@
       <div class="col-md-3 mb-3">
         <button class="btn btn-dark" type="submit">Submit Bet</button>
       </div>
-    </section>
 
-  </form>
-</section>
+      <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">Venmo</button>
+            <button class="dropdown-item" type="button">PayPal</button>
+            <button class="dropdown-item" type="button">Something else here</button>
+          </div>
+        </div>
+
+        
+      </section>
+      
+    </form>
+  </section>
+  
+  <script type='text/javascript'>$('.dropdown-toggle').dropdown('show')</script>   
 
 <% include partials/footer %>

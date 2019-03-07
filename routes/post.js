@@ -14,12 +14,14 @@ router.get('/post', (req, res) => {
 router.post('/post', (req, res, next) => {
     knex('bettors')
     .insert({
-        //left side is database columns, right side is 'names' in ejs file 
         username: req.body.username,
         line: req.body.line,
+        comment: req.body.comment,
         wagerAmount: req.body.wagerAmount,
         date: req.body.date,
         time: req.body.time,
+        payment: req.body.payment,
+
       
     }, '*')
   
