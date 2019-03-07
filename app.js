@@ -11,6 +11,8 @@ const morgan = require('morgan');
 const paypal = require('paypal-rest-sdk');
 const index = require('./routes/index');
 const post = require('./routes/post');
+const login = require('./routes/login');
+
 
 
 paypal.configure({
@@ -111,6 +113,8 @@ app.post('/pay', (req, res) => {
 
 app.use('/index', index);
 app.use(post);
+app.use(login);
+
 
 app.use((_req, res) => {
     res.sendStatus(404);
