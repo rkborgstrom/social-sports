@@ -21,8 +21,6 @@ router.post('/post', (req, res, next) => {
         date: req.body.date,
         time: req.body.time,
         payment: req.body.payment,
-
-      
     }, '*')
   
     .then((bettors) => {

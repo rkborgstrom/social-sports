@@ -7,11 +7,11 @@ let env = process.env.NODE_ENV || 'development';
 let config = require('../knexfile')[env];
 let knex = require('knex')(config);
 
-router.get('/login', (req, res, next) => {
+router.get('/signup', (req, res, next) => {
   knex('bettors')
   .returning('*')
   .then((bettors) => {
-      res.render('login', {bettors});
+      res.render('signup', {bettors});
   })
   .catch((err) => {
       next(err);

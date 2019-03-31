@@ -1,0 +1,182 @@
+<% include partials/header %>
+
+<section class="btl">
+  <section class="center">
+    <section class="buttons">
+      <a href="/bets" class="btn btn-outline-secondary btn-lg" style="color: white;" role="button" aria-pressed="true">Show
+        Bets</a>
+      <a href="/post" class="btn btn-outline-secondary btn-lg" style="color: white;" role="button" aria-pressed="true">Post
+        a Bet</a>
+      <a href="/" class="btn btn-outline-secondary btn-lg" style="color: white;" role="button" aria-pressed="true">Login
+      </a>
+    </section>
+  </section>
+</section>
+
+<div class="container py-3">
+  <div class="row">
+    <div class="mx-auto col-sm-6">
+      <!-- form user info -->
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">User Information</h4>
+        </div>
+        <div class="card-body">
+          <form class="form" role="form" autocomplete="off">
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label">First name</label>
+              <div class="col-lg-9">
+                <input class="form-control" type="text" value="John">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label">Last name</label>
+              <div class="col-lg-9">
+                <input class="form-control" type="text" value="Doe">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label">Phone Number</label>
+              <div class="col-lg-9">
+                <input class="form-control" type="text" value="xxx-xxx-xxxx">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label">Address</label>
+              <div class="col-lg-9">
+                <input class="form-control" type="text" value="">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label">Time Zone</label>
+              <div class="col-lg-9">
+                <select id="user_time_zone" class="form-control" size="0">
+                  <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                  <option value="Alaska">(GMT-09:00) Alaska</option>
+                  <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                  <option value="Arizona">(GMT-07:00) Arizona</option>
+                  <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                  <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp;
+                    Canada)</option>
+                  <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                  <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label">Username</label>
+              <div class="col-lg-9">
+                <input class="form-control" type="text" value="">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label">Password</label>
+              <div class="col-lg-9">
+                <input class="form-control" type="password" value="">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label">Confirm</label>
+              <div class="col-lg-9">
+                <input class="form-control" type="password" value="">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label"></label>
+              <div class="col-lg-9">
+                <input type="reset" class="btn btn-secondary" value="Cancel">
+                <input type="button" class="btn btn-primary" value="Save Changes">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container py-3">
+  <div class="row">
+    <div class="col-12 col-sm-8 col-md-6 mx-auto">
+      <div id="pay-invoice" class="card">
+        <div class="card-body">
+          <div class="card-title">
+            <h2 class="text-center">Become a Member</h2>
+          </div>
+          <hr>
+          <form action="" method="post" novalidate="novalidate">
+            <input type="hidden" id="first_name" name="first_name" value="">
+            <input type="hidden" id="last_name" name="last_name" value="">
+            <input type="hidden" id="card_num" name="card_num" value="">
+            <input type="hidden" id="exp_date" name="exp_date" value="">
+            <div class="form-group text-center">
+              <ul class="list-inline">
+                <li class="list-inline-item"><i class="text-muted fa fa-cc-visa fa-2x"></i></li>
+                <li class="list-inline-item"><i class="fa fa-cc-mastercard fa-2x"></i></li>
+                <li class="list-inline-item"><i class="fa fa-cc-amex fa-2x"></i></li>
+                <li class="list-inline-item"><i class="fa fa-cc-discover fa-2x"></i></li>
+              </ul>
+            </div>
+            <div class="form-group">
+              <label>Payment amount</label>
+              <h2>$50.00</h2>
+            </div>
+            <div class="form-group has-success">
+              <label for="cc-name" class="control-label">Name on card</label>
+              <input id="cc-name" name="cc-name" type="text" class="form-control cc-name valid" data-val="true"
+                data-val-required="Please enter the name on card" autocomplete="cc-name" aria-required="true"
+                aria-invalid="false" aria-describedby="cc-name-error">
+              <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+              <label for="cc-number" class="control-label">Card number</label>
+              <input id="cc-number" name="cc-number" type="tel" class="form-control cc-number identified visa" value=""
+                data-val="true" data-val-required="Please enter the card number" data-val-cc-number="Please enter a valid card number"
+                autocomplete="cc-number">
+              <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="cc-exp" class="control-label">Expiration</label>
+                  <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" value="" data-val="true"
+                    data-val-required="Please enter the card expiration" data-val-cc-exp="Please enter a valid month and year"
+                    placeholder="MM / YY" autocomplete="cc-exp">
+                  <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                </div>
+              </div>
+              <div class="col-6">
+                <label for="x_card_code" class="control-label">Security code</label>
+                <div class="input-group">
+                  <input id="x_card_code" name="x_card_code" type="tel" class="form-control cc-cvc" value="" data-val="true"
+                    data-val-required="Please enter the security code" data-val-cc-cvc="Please enter a valid security code"
+                    autocomplete="off">
+                  <div class="input-group-addon">
+                    <span class="fa fa-question-circle fa-lg" data-toggle="popover" data-container="body" data-html="true"
+                      data-title="Security Code" data-content="<div class='text-center one-card'>The 3 digit code on back of the card..<div class='visa-mc-cvc-preview'></div></div>"
+                      data-trigger="hover"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="x_zip" class="control-label">Postal code</label>
+              <input id="x_zip" name="x_zip" type="text" class="form-control" value="" data-val="true"
+                data-val-required="Please enter the ZIP/Postal code" autocomplete="postal-code">
+              <span class="help-block" data-valmsg-for="x_zip" data-valmsg-replace="true"></span>
+            </div>
+            <div>
+              <button id="payment-button" type="submit" class="btn btn-lg btn-success btn-block">
+                <i class="fa fa-lock fa-lg"></i>&nbsp;
+                <span id="payment-button-amount">Pay $50.00</span>
+                <span id="payment-button-sending" style="display:none;">Sending…</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partials/footer %>

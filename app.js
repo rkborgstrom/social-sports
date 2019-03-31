@@ -11,14 +11,14 @@ const morgan = require('morgan');
 const paypal = require('paypal-rest-sdk');
 const index = require('./routes/index');
 const post = require('./routes/post');
-const login = require('./routes/login');
-
+const bets = require('./routes/bets');
+const signup = require('./routes/signup');
 
 
 paypal.configure({
     'mode': 'sandbox', //sandbox or live
     'client_id': 'AZIvtqHADp6az9a1jnB5zvSmQSZNzh877_Xy1NGIPdoPu_5W7N3uni9ksTqATWbeba-eMmxJJsaaSqFn',
-    'client_secret': 'EJ7qZkJmsP8PTyWo33L6a62O6IfrOND98CLQ6E2-S7E_sWLiOJv3hQklGMa3CeO6jPjYcPW2g-O_rKSz'
+    'client_secret': 'EJ7qZkJmsP8PTyWo33L6a62O6IfrOND98CLQw6E2-S7E_sWLiOJv3hQklGMa3CeO6jPjYcPW2g-O_rKSz'
   });
 
 app.set('view engine', 'ejs');
@@ -111,7 +111,10 @@ app.post('/pay', (req, res) => {
 
 app.use('/index', index);
 app.use(post);
-app.use(login);
+app.use(bets);
+app.use(signup);
+
+
 
 
 app.use((_req, res) => {
