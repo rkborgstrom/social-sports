@@ -198,3 +198,46 @@ a:hover {
 
 }
 
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: #e2e2e2;
+}
+
+.example-card {
+	transition: transform 0.3s ease-out;
+}
+
+.example-card.rotate {
+	transform: rotateY(180deg);
+}
+
+.example-card .card-header-pills {
+	transition: transform 0.3s ease-out;
+}
+
+.example-card.rotate .card-header-pills {
+	transform: rotateY(180deg);
+}
+
+.nav-rotate {
+	transform: rotateY(180deg);
+}
+
+.btn-facebook {
+	background-color: #395694 !important;
+	border-color: #395694 !important;
+}
+
+.btn-twitter {
+	background-color: #1c9ceb !important;
+	border-color: #1c9ceb !important;
+}
+
+.btn-google-plus {
+	background-color: #d64937 !important;
+	border-color: #d64937 !important;
+}
