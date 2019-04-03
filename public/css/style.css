@@ -21,11 +21,11 @@ a:hover {
   color: black !important;
 }
 
-.container {
+/* .container {
   opacity: 0.9;
   padding-top: 15px;
   background-color: black;
-}
+} */
 
 .formContainer {
   background: url('../images/green.jpg') repeat center center fixed;
