@@ -33,6 +33,10 @@ body {
   color: white;
 }
 
+#bc {
+  background-color: black;
+}
+
 a:hover {
   background-color: white !important;
   color: black !important;
