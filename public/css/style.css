@@ -11,12 +11,24 @@ body {
   background-position: center;
 }
 
+.mid {
+  display: flex;
+  justify-content: center;
+  Padding: 20px 20px 20px 20px;
+  background-color: #1e7e34;
+}
+
 .buttons {
   display: flex;
   justify-content: center;
 }
 
 #signinBTN {
+  Background-color: #1e7e34;
+  color: white;
+}
+
+#sports {
   Background-color: #1e7e34;
   color: white;
 }

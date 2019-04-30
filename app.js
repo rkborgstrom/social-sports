@@ -13,6 +13,8 @@ const index = require('./routes/index');
 const post = require('./routes/post');
 const bets = require('./routes/bets');
 const signup = require('./routes/signup');
+const sports = require('./routes/sports');
+
 
 
 paypal.configure({
@@ -113,6 +115,8 @@ app.use('/index', index);
 app.use(post);
 app.use(bets);
 app.use(signup);
+app.use(sports);
+
 
 
 
